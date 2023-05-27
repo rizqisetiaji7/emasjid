@@ -21,7 +21,8 @@ class MasjidController extends Controller
      */
     public function create()
     {
-        return view('masjid.create');
+        $masjid = new Masjid();
+        return view('masjid.create', compact('masjid'));
     }
 
     /**
