@@ -14,9 +14,9 @@ return new class extends Migration
         Schema::create('masjids', function (Blueprint $table) {
             $table->id();
             $table->string('nama');
-            $table->char('telepon', 20)->nullable();
-            $table->text('alamat')->nullable();
+            $table->string('telepon')->nullable();
             $table->string('email')->nullable();
+            $table->text('alamat')->nullable();
             $table->timestamps();
         });
     }
