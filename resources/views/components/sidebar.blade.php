@@ -12,6 +12,13 @@
                <span class="align-middle">Home</span>
             </a>
          </li>
+         
+         <li class="sidebar-item">
+            <a class="sidebar-link" href="{{ route('masjid.create') }}">
+               <i class="align-middle" data-feather="edit-2"></i> 
+               <span class="align-middle">Data Masjid</span>
+            </a>
+         </li>
 
          <li class="sidebar-item">
             <a class="sidebar-link" href="#">
