@@ -16,8 +16,8 @@
                         Nama masjid <span class="text-danger">*</span>
                      </label>
                      <div class="col-12 col-sm-9">
-                        {!! Form::text('nama', NULL, ['class' => "form-control", 'placeholder' => 'Isi nama masjid']) !!}
-                        <div class="text-danger">{!! $errors->first('nama') !!}</div>
+                        {!! Form::text('nama', NULL, ['class' => 'form-control '. ($errors->has('nama') ? 'is-invalid' : ''), 'placeholder' => 'Isi nama masjid', 'autofocus']) !!}
+                        @if($errors->has('nama')) <div class="invalid-feedback">{!! $errors->first('nama') !!}</div> @endif
                      </div>
                   </div>
                   
@@ -26,8 +26,8 @@
                         Nomor telepon <span class="text-danger">*</span>
                      </label>
                      <div class="col-12 col-sm-9">
-                        {!! Form::number('telepon', NULL, ['class' => 'form-control', 'placeholder' => 'No. telepon / nomor HP Pengurus']) !!}
-                        <div class="text-danger">{!! $errors->first('telepon') !!}</div>
+                        {!! Form::number('telepon', NULL, ['class' => 'form-control '. ($errors->has('telepon') ? 'is-invalid' : ''), 'placeholder' => 'No. telepon / nomor HP Pengurus']) !!}
+                        @if($errors->has('telepon')) <div class="invalid-feedback">{!! $errors->first('telepon') !!}</div> @endif
                      </div>
                   </div>
                   
@@ -36,8 +36,8 @@
                         Email <span class="text-muted small">(Isi jika ada)</span>
                      </label>
                      <div class="col-12 col-sm-9">
-                        {!! Form::email('email', NULL, ['class' => 'form-control', 'placeholder' => 'Alamat email']) !!}
-                        <div class="text-danger">{!! $errors->first('email') !!}</div>
+                        {!! Form::email('email', NULL, ['class' => 'form-control '. ($errors->has('email') ? 'is-invalid' : ''), 'placeholder' => 'Alamat email']) !!}
+                        @if($errors->has('email')) <div class="invalid-feedback">{!! $errors->first('email') !!}</div> @endif
                      </div>
                   </div>
                   
@@ -46,8 +46,8 @@
                         Alamat masjid <span class="text-danger">*</span>
                      </label>
                      <div class="col-12 col-sm-9">
-                        {!! Form::textarea('alamat', NULL, ['class' => 'form-control', 'rows' => '4', 'placeholder' => 'Alamat lengkap']) !!}
-                        <div class="text-danger">{!! $errors->first('alamat') !!}</div>
+                        {!! Form::textarea('alamat', NULL, ['class' => 'form-control '. ($errors->has('alamat') ? 'is-invalid' : ''), 'rows' => '4', 'placeholder' => 'Alamat lengkap']) !!}
+                        @if($errors->has('alamat')) <div class="invalid-feedback">{!! $errors->first('alamat') !!}</div> @endif
                      </div>
                   </div>
 
