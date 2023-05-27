@@ -11,7 +11,7 @@ class StoreMasjidRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,10 @@ class StoreMasjidRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'nama'      => 'required',
+            'telepon'   => 'required|digits:12',
+            'email'     => 'email:rfc,dns',
+            'alamat'    => 'max:300'
         ];
     }
 }
