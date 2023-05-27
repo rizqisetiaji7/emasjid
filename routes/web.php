@@ -28,6 +28,6 @@ Route::middleware(['auth'])->group(function() {
         Route::get('/home', [HomeController::class, 'index'])->name('home');
     });
 
-    Route::resource('/masjid', MasjidController::class);
+    Route::resource('/masjid', MasjidController::class)->except(['index','destroy','edit','show']);
 });
 
